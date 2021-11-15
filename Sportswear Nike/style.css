@@ -1,0 +1,229 @@
+nav {
+  width: 80%;
+  height: 200px;
+  background: white;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 10%;
+}
+
+.logo img {
+  width: 100px;
+  float: left;
+}
+
+.nav-menu {
+  width: 40%;
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin-right: -50;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.keranjang {
+  transform: scale(2);
+  margin-left: auto;
+}
+
+.nav-menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-right {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right li {
+  text-decoration: none;
+  list-style: none;
+  width: auto;
+  margin-right: 30px;
+  color: #555;
+  font-size: 25px;
+  padding: 8px 20px;
+}
+
+.nav-right li i{
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right li a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-right li:last-child {
+  border: 2px solid;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.badge-notify {
+  background: red;
+  position: relative;
+  top: -15px;
+  right: 25px;
+  font-family: sans-serif;
+}
+
+.cart {
+  position: relative;
+}
+
+main {
+  width: 100%;
+  height: 580px;
+  padding: 10px 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 23.5%;
+  height: 380px;
+  background: whitesmoke;
+  padding: 5px;
+  position: relative;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.item:hover {
+  height: 560px;
+}
+
+.item:hover .dat {
+  padding: 10px;
+  height: 250px;
+}
+
+.item:hover img {
+  transform: scale(0.8);
+}
+
+.item img {
+  width: 100%;
+  margin: auto;
+  transition: inherit;
+  transform: scale(1.09);
+}
+
+.dat {
+  width: 100%;
+  height: 0;
+  background: #eee;
+  padding: 0;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  transition: inherit;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.dat p {
+  margin: 10px 10px auto 15px;
+}
+
+.dat small {
+  font-size: 15px;
+}
+
+.dat strong {
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+}
+
+.dat p:first-child strong {
+  width: 75%;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.in span {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background: white;
+  display: inline-block;
+  text-align: center;
+  margin: 0 6px;
+}
+
+.in span.active {
+  background: gray;
+  color: white;
+}
+
+.in:nth-of-type(2n) span {
+  background: #55299d;
+  border: 2px solid #ccc;
+}
+
+.in:nth-of-type(2n) span:first-child {
+  background: white;
+}
+
+.in:nth-of-type(2n) span:last-child {
+  background: #f04271;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: #00b0c4;
+  color: white;
+  cursor: pointer;
+}
+
+button.add {
+  background: #f04271;
+}
+
+
+
+
+.cart{
+  position: relative;
+}
+.cart:before{
+  position: absolute;
+  content: attr(data-count);
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  border-radius: 15px;
+  top: -20px;
+  text-align: center;
+  background: red;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.cart.on:before{
+  opacity: 1;
+}
